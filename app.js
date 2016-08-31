@@ -1,23 +1,17 @@
  $.getJSON('database.json', function(diagnostics){
 
- 	
-
 	_.filter(diagnostics, function(diagnostic) { return diagnostic.type == 'charpter'; }).forEach(function(item){
-		var id = $('<strong/>', { text: item.id });
-		createItem(item).addClass('charpter').click(function(event){
-			getChilds(event);
-		}).appendTo('.list-group');
+		createItem(item).appendTo('.list-group');
 	});
 
  	function getChilds(event) {
  		if($(event.target).hasClass('open')) {
- 			
+ 			$(event.target).removeClass('open').find('ul').remove()
  		} else {
  			$(event.target).addClass('open');
 			list = $('<ul/>', { class: "list-group" })
 			_.filter(diagnostics, function(diagnostic) { return diagnostic.parent == event.target.id; }).forEach(function(item){
-				createItem(item).addClass('category').appendTo(list).click(function(event){
-				});
+				createItem(item).appendTo(list);
 			});
 			list.appendTo(event.target);
  		}
@@ -30,12 +24,19 @@
 		    id: diagnostic.id,
 		    title: diagnostic.title,
 		    text: diagnostic.title,
-		    class: 'list-group-item'
+		    class: 'list-group-item ' + diagnostic.type + (typeof childsAmount === 'undefined' ? ' noChilds' : ' hasChilds')
 		}).prepend(id)
-		if(childsAmount > 0) {
-			element.append($('<i/>', { class: 'glyphicon glyphicon-chevron-down pull-right' })).append($("<span/>", { class: 'badge', text: childsAmount })).css('cursor', 'pointer')
+		if(typeof childsAmount != 'undefined') {
+			element.append($('<i/>', { class: 'icon pull-right' })).css('cursor', 'pointer')
 		}
 		return element;
 	}
 
+		$('li.hasChilds').click(function() {
+			getChilds(event);
+			return false;
+		});
+
+
  });
+
