@@ -17,7 +17,13 @@
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<input type="text" name="search" id="search" placeholder="Filtrar Diagnosticos" class="form-control input-lg" />
+			<div class="input-group input-group-xl">
+				<input type="text" class="form-control input-lg" name="search" id="search" placeholder="Filtrar Diagnosticos">
+				<div class="input-group-btn">
+					<button id="btnsearch" class="btn btn-lg btn-default">Buscar</button>
+					<button id="btnclear" class="btn btn-lg btn-default">Limpiar</button>
+				</div>
+			</div>
 			<div id="tree"></div>
 		</div>
 	</div>
