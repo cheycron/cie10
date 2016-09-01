@@ -1,13 +1,14 @@
 <!doctype html>
-
 <html lang="es">
+
 <head>
 	<meta charset="utf-8">
 	<title>Indice de Diagnosticos de CIE10</title>
 	<meta name="description" content="Indice de Diagnosticos de CIE10">
 	<meta name="author" content="Cheycron Blaine">
-	<link rel="stylesheet" href="vendor/bootstrap/css/bootswatch.min.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.min.css">
+	<link rel="stylesheet" href="bower_components\bootstrap-treeview\dist\bootstrap-treeview.min.css">
+	<link rel="stylesheet" href="lib/app.css">
 	<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 	<![endif]-->
@@ -16,13 +17,15 @@
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<ul class="list-group">
-			</ul>
+			<input type="text" name="search" id="search" placeholder="Filtrar Diagnosticos" class="form-control input-lg" />
+			<div id="tree"></div>
 		</div>
 	</div>
-	<script src="vendor/jquery-3.1.0.min.js"></script>
-	<script src="vendor/lodash.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="app.js"></script>
+	<script src="bower_components\jquery\dist\jquery.min.js"></script>
+	<script src="bower_components\lodash\dist\lodash.min.js"></script>
+	<script src="bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
+	<script src="bower_components\bootstrap-treeview\dist\bootstrap-treeview.min.js"></script>
+	<script src="lib/app.js"></script>
 </body>
+
 </html>

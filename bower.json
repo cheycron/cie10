@@ -1,0 +1,24 @@
+{
+  "name": "cie10",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Cheycron Blaine"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cheycron/cie10",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.0",
+    "bootstrap": "~3.3.7",
+    "bootstrap-treeview": "~1.2.0",
+    "lodash": "~4.15.0"
+  }
+}
