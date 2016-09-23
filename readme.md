@@ -1,3 +1,8 @@
-Simple CIE10 index and search in spanish.
+## Indice y Busqueda de diagnosticos de **Cie10**.
 
-Currently WIP.
+Sin backend, solo javascript. Se utiliza como base de datos _dist/database.json_. 
+
+Build: 
+- `npm install`
+- `bower install`
+- `gulp`

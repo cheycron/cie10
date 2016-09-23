@@ -24,7 +24,7 @@ var cleanSearch = function() {
     $('li.node-tree').show();
 }
 
-$.getJSON("lib/database.json", function(data) {
+$.getJSON("js/database.json", function(data) {
     $('#loading').hide();
     tree = $('#tree').treeview({
         data: data,
